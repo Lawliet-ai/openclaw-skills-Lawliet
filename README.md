@@ -2,7 +2,9 @@
 <p align="center">
   <img src="./Logo.png" width="120" alt="Lawliet OpenClaw Skills Logo">
 </p>
-
+![OpenClaw](https://img.shields.io/badge/OpenClaw-Compatible-orange)
+![Version](https://img.shields.io/badge/Version-1.0.0--latest-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 # OpenClaw-Skills-Lawliet 🛠️
 ## 别把 AI 当成高级荧光笔，把它当成你的认知杠杆。
 ## Stop using AI as a high-end highlighter. Start using it as a cognitive lever.
