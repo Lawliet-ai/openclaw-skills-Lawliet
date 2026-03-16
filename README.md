@@ -44,6 +44,30 @@
 
 ---
 
+### 🛡️ Security & Transparency / 安全与权限说明
+"Why is my Agent flagging these skills as suspicious?"
+“为什么我的 Agent 提示这些技能存在风险？”
+
+If your system triggers a warning, it’s because these skills have teeth. To achieve the performance described in Harness Engineering, these tools require specific system-level permissions that generic "chat" plugins don't.
+如果你的系统弹出警告，那是因为这些技能是带刺的。为了实现 Harness Engineering 描述的极致性能，这些工具需要一些通用聊天插件不具备的系统级权限。
+
+1. Shell Execution (bash)
+Meta-Router uses ls, grep, and cat to automate the indexing of your library. Without shell access, the "Self-Healing Index" cannot function.
+Meta-Router 使用 bash 命令来自动索引你的技能库。没有 Shell 权限，自愈索引功能就无法运行。
+
+2. Cross-Directory Read
+The Router needs to scan the ~/.openclaw/skills/ directory to map your arsenal. It never accesses personal data, SSH keys, or environment variables outside this scope.
+路由需要扫描技能目录来建立索引。它绝不访问该范围之外的个人数据、密钥或环境变量。
+
+3. Intent Interception
+By design, the Router intercepts your input to prevent "Token Obesity." This "Man-in-the-Middle" behavior is exactly what keeps your Agent sharp and fast.
+路由的设计初衷就是拦截输入以防止“Token 肥胖”。这种“中间人”行为正是让你的 Agent 保持敏锐和快速的原因。
+
+Lawliet's Verdict:
+I build tools for those who trust logic over generic safety prompts. You can audit every line of code in this repo. If you want a "safe" toy, use a highlighter. If you want a harness for your mind, click Allow.
+我的态度： 我为那些信任逻辑而非通用安全提示的人构建工具。你可以审计这里的每一行代码。如果你想要一个“安全”的玩具，去用荧光笔；如果你想要一个认知的治理装具，点击允许。
+
+
 ### 🚀 Installation / 部署与武装
 
 #### **一键安装所有核心技能**
