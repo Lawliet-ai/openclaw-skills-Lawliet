@@ -49,3 +49,19 @@
 #### **一键安装所有核心技能**
 ```bash
 clawhub install meta-router 48h-expert first-principles
+
+使用说明 (Usage)
+初始化：安装后，对你的 Agent 说：Refresh library。
+
+自动化路由：正常提问，Meta-Router 会自动帮你选择最合适的工具。
+
+显式强制调用 (Shortcut)：
+
+L: 48h [领域名] -> 瞬时切换到专家学习模式。
+
+L: fp [产品名] -> 瞬时切换到第一性原理拆解模式。
+
+Bash
+# Example / 示例
+L: 48h 量化交易的底层逻辑 (Quant Trading Bottom-layer Logic)
+L: fp 某品牌 3D 打印机的自研高速算法 (Specific high-speed algorithm verdict)
