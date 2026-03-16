@@ -1,13 +1,14 @@
-
 <p align="center">
   <img src="./Logo.png" width="120" alt="Lawliet OpenClaw Skills Logo">
 </p>
-![OpenClaw](https://img.shields.io/badge/OpenClaw-Compatible-orange)
-![Version](https://img.shields.io/badge/Version-1.0.0--latest-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+
 # OpenClaw-Skills-Lawliet 🛠️
 ## 别把 AI 当成高级荧光笔，把它当成你的认知杠杆。
 ## Stop using AI as a high-end highlighter. Start using it as a cognitive lever.
+
+![OpenClaw](https://img.shields.io/badge/OpenClaw-Compatible-orange)
+![Version](https://img.shields.io/badge/Version-1.0.0--latest-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
@@ -17,11 +18,24 @@
 
 这里的工具只有一个目的：把 LLM 从复读机变成能够进行“底层解构”的残酷智囊。这些技能是我为那些比起礼貌的表层废话，更看重深层逻辑、物理硬约束和原子真相的人准备的认知杠杆。
 
-**Most LLM summaries are brain-dead filler.** High-fructose corn syrup for the mind. Sweet, but intellectually bankrupt. This repo is not for people who want easy answers; it's for people who want the atomic truth. These are tools to force LLMs to stop 'summarizing' and start 'deconstructing' based on first principles.
+**Most LLM summaries are brain-dead filler.** High-fructose corn syrup for the mind. Sweet, but intellectually bankrupt. This repo is not for people who want easy answers; it's for people who want the atomic truth.
 
 ---
 
-### 🧰 The Arsenal / 军火库
+### ⚡ Core Infrastructure / 核心底座 (Must Install)
+
+#### **[Meta-Router: 自动化认知网关](./meta-router)**
+这是整个 Lawliet 军火库的“操作系统内核”。
+
+* **为什么要装？** 技能装得越多，AI 越慢。因为它每次对话前都要背诵几万字的技能说明。这叫“认知污染”。
+* **它怎么工作？** * **自动索引**：安装新技能后，它会自动扫描并生成不到 1KB 的快速检索表。
+    * **按需加载 (Lazy Loading)**：禁止 AI 遍历全量文档。只有检测到对应意图时，才挂载特定技能，节省 80% 以上的 Token。
+    * **路由拦截**：像网关一样拦截你的输入，实现“毫秒级”技能分发。
+* **Why this?** Stop feeding the LLM 10k tokens of skill docs per prompt. This meta-skill implements an "Index-then-Load" architecture. It monitors your environment, builds a silent cache, and prunes context to maximize reasoning speed.
+
+---
+
+### 🧰 The Arsenal / 认知军火库
 
 | Skill / 技能 | Description / 简介 |
 | :--- | :--- |
@@ -30,17 +44,8 @@
 
 ---
 
-### 🚀 Usage / 部署与使用
+### 🚀 Installation / 部署与武装
 
-#### 安装 48 小时专家方法论
-clawhub install 48h-expert
-
-#### 安装第一性原理调研
-clawhub install first-principles
-
-安装后在对话中直接触发：
-
+#### **一键安装所有核心技能**
 ```bash
-# Example / 示例
-learn: 量化交易的底层逻辑 (Quant Trading Bottom-layer Logic)
-research: 某高速算法的物理实现效率 (High-speed Algorithm Efficiency Verdict)
+clawhub install meta-router 48h-expert first-principles
