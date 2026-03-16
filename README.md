@@ -24,7 +24,7 @@
 
 ### ⚡ Core Infrastructure / 核心底座 (Must Install)
 
-#### **[Meta-Router: 自动化认知网关](openclaw-skills-Lawliet./Meta-Router/README)**
+#### **[Meta-Router: 自动化认知网关](./Meta-Router/README.md)**
 这是整个 Lawliet 军火库的“操作系统内核”。
 
 * **为什么要装？** 技能装得越多，AI 越慢。因为它每次对话前都要背诵几万字的技能说明。这叫“认知污染”。
