@@ -29,10 +29,10 @@
 
 ### 🚀 Usage / 部署与使用
 
-# 安装 48 小时专家方法论
+#### 安装 48 小时专家方法论
 clawhub install 48h-expert
 
-# 安装第一性原理调研
+#### 安装第一性原理调研
 clawhub install first-principles
 
 安装后在对话中直接触发：
