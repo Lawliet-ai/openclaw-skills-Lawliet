@@ -1,5 +1,6 @@
+
 <p align="center">
-  <img src="./logo.png" width="120" alt="openclaw skills-Lawliet Logo">
+  <img src="./Logo.png" width="120" alt="Lawliet OpenClaw Skills Logo">
 </p>
 
 # OpenClaw-Skills-Lawliet 🛠️
