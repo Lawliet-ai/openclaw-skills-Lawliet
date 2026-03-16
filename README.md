@@ -65,3 +65,19 @@ Bash
 # Example / 示例
 L: 48h 量化交易的底层逻辑 (Quant Trading Bottom-layer Logic)
 L: fp 某品牌 3D 打印机的自研高速算法 (Specific high-speed algorithm verdict)
+
+Usage Guide
+Initialization: After installation, simply tell your Agent: Refresh my skill library.
+
+Automated Routing: Just ask a question. Meta-Router will intercept your intent and dispatch the correct tool silently.
+
+Explicit Force-Call (Shortcuts): Use the L: prefix for 100% precision.
+
+L: 48h [Topic] -> Instant activation of Meta-Learning mode.
+
+L: fp [Product/Tech] -> Instant activation of First-Principles Deconstruction.
+
+Bash
+# Examples
+L: 48h The bottom-layer logic of Quantitative Trading
+L: fp Efficiency verdict of Brand X's "Self-developed" high-speed 3D printing algorithm
