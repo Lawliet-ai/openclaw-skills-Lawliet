@@ -81,7 +81,7 @@ Most LLM summaries are like high-fructose corn syrup: sweet, but intellectually 
 *我为那些信任逻辑而非通用安全提示的人构建工具。你可以审计这里的每一行代码。如果你想要一个“安全”的玩具，去用荧光笔；如果你想要认知的治理装具，点击允许。*
 
 ---
-
+Author: Lawliet-ai | License: MIT | Powered by OpenClaw 2026
 ## 🚀 Installation & Usage / 部署与武装
 
 ### One-Click Arming / 一键全量安装
@@ -95,4 +95,4 @@ Audit Mode: L: fp The authenticity of Brand X's "self-developed" high-speed prin
 
 Learning Mode: L: 48h The bottom-layer logic of Quantitative Trading.
 
-Author: Lawliet-ai | License: MIT | Powered by OpenClaw 2026
+
