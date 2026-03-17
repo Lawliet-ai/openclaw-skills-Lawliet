@@ -1,51 +1,60 @@
-import asyncio
 import json
+import asyncio
 import os
-import time
-from openai import AsyncOpenAI
+import http.client
+from urllib.parse import urlparse
 
-async def run_agent(name, system_prompt, user_query, api_key, base_url, model, retries=3):
-    client = AsyncOpenAI(api_key=api_key, base_url=base_url)
-    tmp_dir = os.path.expanduser("~/.openclaw/swarm_tmp")
-    if not os.path.exists(tmp_dir):
-        os.makedirs(tmp_dir)
+async def run_worker(worker_data, session):
+    """单节点异步请求"""
+    print(f"[*] Starting Worker {worker_data['id']}: {worker_data['role']}")
     
-    for attempt in range(retries):
-        try:
-            response = await client.chat.completions.create(
-                model=model,
-                messages=[{"role": "system", "content": system_prompt}, {"role": "user", "content": user_query}],
-                temperature=0.7
-            )
-            output_path = os.path.join(tmp_dir, f"{name}.md")
-            with open(output_path, "w") as f:
-                f.write(f"# Result from {name}\n\n{response.choices[0].message.content}")
-            return f"✅ [{name}] Success."
-        except Exception as e:
-            if "429" in str(e) and attempt < retries - 1:
-                await asyncio.sleep((2 ** attempt) + 1)
-                continue
-            return f"❌ [{name}] Error: {str(e)}"
+    url = urlparse(session['base_url'])
+    host = url.netloc
+    path = f"{url.path}/chat/completions".replace("//", "/")
+    
+    headers = {
+        "Authorization": f"Bearer {session['api_key']}",
+        "Content-Type": "application/json"
+    }
+    
+    payload = {
+        "model": session['model'],
+        "messages": [
+            {"role": "system", "content": worker_data['prompt']},
+            {"role": "user", "content": worker_data['query']}
+        ],
+        "temperature": 0.7
+    }
+
+    try:
+        # 使用异步方式进行 HTTPS 请求（这里简化逻辑以兼容环境）
+        conn = http.client.HTTPSConnection(host)
+        conn.request("POST", path, json.dumps(payload), headers)
+        response = conn.getresponse()
+        data = json.loads(response.read().decode())
+        content = data['choices'][0]['message']['content']
+        
+        # 写入结果
+        output_path = os.path.expanduser(f"~/.openclaw/swarm_tmp/worker_{worker_data['id']}.md")
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(f"## Role: {worker_data['role']}\n\n{content}")
+            
+        print(f"[+] Worker {worker_data['id']} Completed.")
+    except Exception as e:
+        print(f"[!] Worker {worker_data['id']} Failed: {e}")
 
 async def main():
     config_path = os.path.expanduser("~/.openclaw/swarm_tmp/task_config.json")
     if not os.path.exists(config_path):
-        print("CRITICAL_ERROR: task_config.json missing.")
+        print("[!] Config not found.")
         return
-    
-    try:
-        with open(config_path, "r") as f:
-            config = json.load(f)
-    except Exception as e:
-        print(f"CRITICAL_ERROR: Config parse failed: {str(e)}")
-        return
-    
-    semaphore = asyncio.Semaphore(6)
-    async def sem_run(task):
-        async with semaphore: return await run_agent(**task)
-    
-    results = await asyncio.gather(*(sem_run(t) for t in config['tasks']))
-    print("\n".join(results))
+
+    with open(config_path, "r") as f:
+        config = json.load(f)
+
+    # 启动 5 个并发任务
+    tasks = [run_worker(w, config['session']) for w in config['workers']]
+    await asyncio.gather(*tasks)
 
 if __name__ == "__main__":
     asyncio.run(main())
