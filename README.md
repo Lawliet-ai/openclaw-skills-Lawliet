@@ -4,70 +4,95 @@
 
 # OpenClaw-Skills-Lawliet 🛠️
 
-**别把 AI 当成高级荧光笔，把它当成你的认知杠杆。** **Stop using AI as a high-end highlighter. Start using it as a cognitive lever.**
+**Stop using AI as a high-end highlighter. Start using it as a cognitive lever.** **别把 AI 当成高级荧光笔，把它当成你的认知杠杆。**
 
 ---
 
 ## 📖 The Manifesto / 宣言
 
-在信息过载的 2026 年，大多数 LLM 沦为了“礼貌的废话生成器”。如果你只想看高果糖浆式的总结，请离开。这里的工具只有一个目的：**剥离表象，直抵原子真相。**
+Most LLM summaries are like high-fructose corn syrup: sweet, but intellectually bankrupt. They tell you what you want to hear, not what is true. These tools exist for one purpose: to transform LLMs from polite parrots into **ruthless deconstruction engines**. 
 
-These tools are built for the few who value **logic**, **physical constraints**, and **atomic truths** over polite, superficial filler. We don't just "chat"; we deconstruct and produce.
+在信息过载的时代，LLM 沦为了“礼貌的废话生成器”。这里的工具只有一个目的：**剥离表象，直抵原子真相。** 我们不需要复读机，我们需要在物理和逻辑边界上行走的残酷智囊。
 
 ---
 
 ## ⚡ The Infrastructure / 核心底座
 
 ### 1. 🐝 [Hive-Commander](./hive-commander) (The Action-Oriented Swarm)
-**1+5 分布式生产集群 / Distributed Action Kernel**
+**1+5 Distributed Production Kernel / 分布式生产集群**
 
-* **开发理由 (Why):** 单体模型在处理复杂、多维任务（如同时写代码、测试和文档）时，逻辑密度会随 Context 增长剧烈下降，最终导致“认知崩坏”。
-* **解决问题 (Pain Points):** 解决了长文本推理的“降智”问题，以及 AI 无法同时处理多个垂直领域专业任务的局限。
-* **解决思路 (Logic):** 采用 **1 Master + 5 Workers** 的异步并行架构。主控节点负责拆解任务，5 个专家节点在独立的上下文中并行产出，互不干扰。
-* **牛逼之处 (The Edge):** 它不仅是“大脑”，更是“工作室”。内置 **Dev-Mode**（架构/代码/测试同步产出）和 **Slide-Mode**（逻辑/内容/设计同步填充），让 AI 具备真正的工业级交付能力。
+* **The Why (背景):** Single-model reasoning density collapses as context grows. When you ask an AI to code, test, and write docs simultaneously, it chokes.  
+    *单体模型在处理多维任务时，逻辑密度会随 Context 增长剧烈下降，最终导致认知崩坏。*
+* **The Problem (解决的问题):** It eliminates the "Context Stupidity" of long-form tasks. No more hallucinated code or shallow research.  
+    *解决了长文本推理的“降智”问题，以及单线程 AI 无法同时处理多维专业任务的局限。*
+* **The Logic (解决思路):** A **1 Master + 5 Workers** asynchronous architecture. The Master deconstructs the mission; the Workers execute in isolated, high-density contexts.  
+    *采用主从架构。主控拆解任务，5 个专家节点在独立上下文中并行产出，互不干扰。*
+* **The Edge (牛逼之处):** It’s not just a "thinking" tool—it’s a **Production Studio**. With built-in **Dev-Mode** and **Slide-Mode**, it delivers actual codebases and presentation decks in parallel.  
+    *它不仅是“大脑”，更是“工作室”。内置开发与 PPT 模式，让 AI 具备真正的工业级交付能力。**牛逼在它能直接帮你把活干了。***
 
 ### 2. 🚦 [Meta-Router](./meta-router) (The Cognitive Gateway)
-**高性能调度网关 / High-Performance Performance Router**
+**High-Performance Intent Router / 高性能调度网关**
 
-* **开发理由 (Why):** 随着本地技能（Skills）的增加，AI 会因为背诵过多的技能说明书而产生“Token 肥胖”，导致推理速度变慢且意图识别混乱。
-* **解决问题 (Pain Points):** 解决了“技能越多，AI 越笨”的悖论，节省 **80% 以上** 的无效 Context 消耗。
-* **解决思路 (Logic):** 引入 **Lazy Loading (按需加载)** 机制。通过毫秒级的意图探测，只有在确定需要某个技能时，才将其逻辑挂载到当前对话。
-* **牛逼之处 (The Edge):** 它是整个军火库的“操作系统内核”。它让你的 Agent 能够挂载成百上千个技能而依然保持瞬时响应，实现真正的“认知零负担”。
+* **The Why (背景):** "The Skill Paradox"—the more skills you install, the dumber your AI gets because it has to "memorize" every doc before every prompt, leading to **Token Obesity**.  
+    *“技能悖论”：技能装得越多，AI 越笨。因为它在对话前要背诵全量说明书，导致响应变慢、意图混乱。*
+* **The Problem (解决的问题):** Stops the AI from getting confused by too many instructions. Saves 80% of unnecessary context consumption.  
+    *解决了“技能越多，AI 越笨”的悖论，节省 80% 以上的无效 Token 消耗。*
+* **The Logic (解决思路):** **Lazy Loading via Intent Detection.** The Router intercepts your query, matches the intent, and mounts only the necessary skill logic.  
+    *引入“按需加载”机制。毫秒级意图探测，只有确定需要某技能时，才挂载对应逻辑。*
+* **The Edge (牛逼之处):** It’s the **Operating System Kernel** of your arsenal. It allows you to mount 100+ skills with **Zero Overhead**, keeping your Agent sharp and fast.  
+    *它是军火库的操作系统内核。让你的 Agent 挂载成百上千个技能而依然保持瞬时响应。**牛逼在它让你的 AI 永远不会变慢。***
 
 ---
 
 ## 🧰 The Arsenal / 认知军火库
 
 ### 3. 🧠 [48h-Expert](./48h-expert) (The Meta-Learner)
-**领域架构与快速元学习 / Rapid Domain Architecture**
+**Rapid Domain Mapping / 领域架构与元学习**
 
-* **开发理由 (Why):** 碎片化时代，人们习惯于碎片化学习，导致认知结构松散，无法建立领域深度。
-* **解决思路 (Logic):** 基于 **概念递归** 逻辑，强制 AI 寻找领域内支撑起 80% 结果的 20% “原子概念”，并绘制逻辑依赖图谱。
-* **牛逼之处 (The Edge):** 它交付的不是摘要，而是 **认知地图**。它会告诉你：如果你想懂量化交易，你必须先击穿这三个数学模型。它是你 48 小时内降伏一个陌生领域的终极武器。
+* **The Problem:** Fragmented learning leads to superficial understanding. People read summaries but miss the underlying mental models.  
+    *碎片化学习导致认知结构松散，无法建立领域深度。*
+* **The Logic:** Forces the AI to identify the **Atomic Concepts** (the 20% of core knowledge driving 80% of results) and map their recursive dependencies.  
+    *基于概念递归逻辑，强制 AI 寻找支撑领域的“原子概念”，并绘制逻辑依赖图谱。*
+* **The Edge:** It delivers a **Cognitive Map**, not a summary. It tells you what you *must* understand to conquer a domain in 48 hours.  
+    *交付的是认知地图。它会告诉你：如果你想懂量化交易，你必须先击穿这三个数学模型。**牛逼在它能瞬间让你变成懂行人。***
 
 ### 4. ⚖️ [First-Principles](./first-principles) (The BS-Detector)
-**原理审计与“智商税”检测器 / Technical Logic Audit**
+**Truth Audit & Logic Verifier / 原理审计与“智商税”检测器**
 
-* **背景 (Background):** 营销黑话泛滥。我们需要在 5 分钟内看穿一个所谓的“革命性技术”到底是真的突破，还是在物理边缘摩擦的骗局。
-* **解决思路 (Logic):** 强制剥离所有修饰语，将产品声明简化为 **物理极限**、**材料成本** 和 **能量守恒** 等硬指标进行对撞。
-* **牛逼之处 (The Edge):** 它是最残酷的审计员。如果某个 3D 打印机的宣称速度违反了物理常识，该技能会直接给出“逻辑不可行”的判决。它是为追求真相的人准备的 **智力护身符**。
+* **The Problem:** Marketing hype is everywhere. We need to know in 5 minutes if a "revolutionary" tech is a breakthrough or a scam.  
+    *营销黑话泛滥。我们需要快速看穿一个技术是真的突破，还是在物理边缘摩擦的骗局。*
+* **The Logic:** Strips away all adjectives. Re-evaluates claims against **Physical Constants** and **Economic Realities**.  
+    *剥离所有修饰语，将声明简化为物理极限、材料成本和能量守恒等硬指标进行对撞。*
+* **The Edge:** It is the **Cruelest Auditor**. If a 3D printer's speed claim violates its motor torque limits, the verdict is "Logically Impossible."  
+    *它是最残酷的审计员。如果声明违反了物理常识，直接判死刑。**牛逼在它是所有虚假宣传的噩梦。***
 
 ---
 
 ## 🛡️ Security & Transparency / 安全与权限说明
 
-**"These tools have teeth."** 为了实现极致性能，本库需要以下系统级权限：
+**"These tools have teeth."** To achieve this level of performance, the arsenal requires specific system permissions:  
+这些工具是“带刺”的。为了实现极值的性能，它们需要以下权限：
 
-1.  **Python Execution (exec)**: `Hive-Commander` 运行 `executor.py` 实现异步并发生产。
-2.  **Shell Access (bash)**: `Meta-Router` 调用 `ls/grep` 实现技能索引自愈。
-3.  **Cross-Directory Access**: 指挥官节点需要读取技能目录来“动态招聘”专家。
+1.  **Python Execution (exec)**: `Hive-Commander` runs async scripts to drive parallel production. 
+2.  **Shell Access (bash)**: `Meta-Router` uses `ls/grep` for self-healing indexing of your skills.
+3.  **Cross-Directory Access**: The Commander must "recruit" skills from your local directory to build the swarm.
 
-**Verdict**: 我为那些信任逻辑而非通用安全提示的人构建工具。如果你想要一个“安全”的玩具，去用荧光笔。
+**Lawliet's Verdict:** I build tools for those who trust logic over generic safety prompts. You can audit every line of code. If you want a "safe" toy, use a highlighter. If you want a harness for your mind, click Allow.  
+*我为那些信任逻辑而非通用安全提示的人构建工具。你可以审计这里的每一行代码。如果你想要一个“安全”的玩具，去用荧光笔；如果你想要认知的治理装具，点击允许。*
 
 ---
 
 ## 🚀 Installation & Usage / 部署与武装
 
-### 1. 一键全量安装 (One-Click Arming)
+### One-Click Arming / 一键全量安装
 ```bash
 clawhub install hive-commander meta-router 48h-expert first-principles
+
+Action Scenarios / 实战指令
+Swarm Mode: hive: Develop a personal finance tool with a Web UI.
+
+Audit Mode: L: fp The authenticity of Brand X's "self-developed" high-speed printing algorithm.
+
+Learning Mode: L: 48h The bottom-layer logic of Quantitative Trading.
+
+Author: Lawliet-ai | License: MIT | Powered by OpenClaw 2026
