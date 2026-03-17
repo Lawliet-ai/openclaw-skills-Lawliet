@@ -4,42 +4,64 @@
 
 # OpenClaw-Skills-Lawliet 🛠️
 
-**别把 AI 当成高级荧光笔，把它当成你的认知杠杆。**
-**Stop using AI as a high-end highlighter. Start using it as a cognitive lever.**
+**别把 AI 当成高级荧光笔，把它当成你的认知杠杆。** **Stop using AI as a high-end highlighter. Start using it as a cognitive lever.**
 
 ---
 
-## 🐝 Hive-Commander (The Action Kernel)
-### 1+5 并行指挥官：从“思考”到“生产” / From Reasoning to Production
+## 📖 The Manifesto / 宣言
 
-这是你的**虚拟工作室**。它不仅仅是学习工具，更是能交付代码和文档的生产力集群。
-This is your **virtual studio**. It moves beyond learning to become a production swarm that delivers code, slides, and strategies.
-
-* **💻 Developer Swarm (开发集群)**: 
-    同步生成架构设计、核心逻辑、单元测试与文档。一个人就是一支开发团队。 / Simultaneously generates architecture, core logic, unit tests, and documentation. Be a full dev-team by yourself.
-* **📊 PPT Architect (PPT 架构师)**: 
-    基于金字塔原理，并行填充幻灯片内容并输出 Marp/PPT 源码，实现从想法到演示文稿的分钟级跨越。 / Uses the Pyramid Principle to concurrently fill slide content and output Marp/PPT source code in minutes.
-* **🔍 Intelligence Hive (情报蜂群)**: 
-    多维度拆解复杂行业，同步进行技术选型、成本测算与风险评估。 / Multi-dimensional deconstruction of industries, syncing tech selection, cost estimation, and risk assessment.
+> 大多数 LLM 生成的总结就像高果糖浆——甜，但没营养。这里的工具只有一个目的：把 LLM 从复读机变成能够进行“底层解构”的残酷智囊。
+> 
+> Most LLM summaries are like high-fructose corn syrup: sweet, but intellectually bankrupt. These tools exist for one purpose: to transform LLMs from parrots into **ruthless deconstruction engines**.
 
 ---
 
-## 🚦 Meta-Router (The Kernel Gateway)
-### 自动化调度网关 / Autonomous Performance Router
+## ⚡ Core Infrastructure / 核心底座
 
-* **Zero-Lag Dispatch (零延迟分发)**: 毫秒级意图识别，自动在单一技能与 Hive 集群间切换。 / Sub-millisecond intent recognition, auto-switching between single skills and the Hive Swarm.
-* **Context Pruning (上下文剪枝)**: 极致清理无效 Token，确保高并发下的推理质量。 / Aggressive context cleaning to maintain reasoning density under high concurrency.
+### 1. 🐝 [Hive-Commander](./hive-commander) (The Action Swarm)
+**1+5 分布式指挥官：从“思考”到“生产” / From Reasoning to Production**
+
+这是你的**虚拟工作室**。当任务复杂度超过单体模型极限时，它会瞬间裂变为一个“1 个主控 + 5 个专家”的并行生产集群。
+
+* **💻 Developer Swarm (开发集群)**: 同步生成架构设计、核心逻辑与单元测试。
+* **📊 PPT Architect (PPT 架构师)**: 基于金字塔原理，并行填充内容并输出 Marp/PPT 源码。
+* **Dynamic Recruitment (人才征调)**: 自动招募本地技能（如 48h-expert）注入专家节点。
+
+### 2. 🚦 [Meta-Router](./meta-router) (The Kernel Gateway)
+**自动化认知网关：性能与逻辑的护卫 / Autonomous Performance Router**
+
+这是系统的**内核**，负责在毫秒级处理成百上千个技能的调度，解决“技能污染”。
+
+* **Lazy Loading (按需加载)**: 只有检测到对应意图时才挂载逻辑，节省 80% 以上的无效 Token。
+* **Context Pruning (上下文剪枝)**: 极致清理无效背景，确保推理密度。
 
 ---
 
-## 🚀 Use Cases / 实战场景
+## 🧰 The Arsenal / 认知军火库
 
-* **`hive: 开发一个带 Web 界面的个人财务管理工具。`**
-    > 系统将分裂出：[架构师]、[前端开发]、[后端开发]、[安全审计]、[文档员]。
-* **`hive: 生成一份关于 2026 AI 硬件趋势的 PPT，要求配色冷峻，逻辑紧密。`**
-    > 系统将分裂出：[逻辑主理人]、[内容专家组]、[视觉布局师]。
-* **`L: fp 某新能源车型的电池管理系统。`**
-    > 调用第一性原理，拆解技术上限。
+| Skill / 技能 | What it actually delivers / 交付成果 | Logic / 底层逻辑 |
+| :--- | :--- | :--- |
+| **[Hive-Commander](./hive-commander)** | **Production Swarm.** Delivering code, slides, and parallel research. | 1+5 Parallel Action |
+| **[Meta-Router](./meta-router)** | **System Speed.** Preventing AI from getting confused by too many skills. | Intent Routing |
+| **[48h-Expert](./48h-expert)** | **Mental Map.** Mapping the DNA of a new industry in 48h. | Atomic Concept Mapping |
+| **[First-Principles](./first-principles)** | **Truth Audit.** Catching lies and marketing hype via physics/math. | Logic Deconstruction |
 
 ---
-**Author:** Lawliet-ai | **License:** MIT
+
+## 🛡️ Security & Transparency / 安全与权限说明
+
+**"Why is my Agent flagging these skills as suspicious?"** 这些工具是“带刺”的。为了实现极致性能，它们需要以下权限：
+
+1.  **Python Execution (exec)**: `Hive-Commander` 必须运行 `executor.py` 进行异步并发生产。
+2.  **Shell Access (bash)**: `Meta-Router` 调用 `ls` 和 `grep` 实现自愈索引。
+3.  **Cross-Directory Access**: 指挥官需要读取技能目录来“招募”专家节点。
+
+**Verdict**: 我为那些信任逻辑而非通用安全提示的人构建工具。如果你想要一个“安全”的玩具，去用荧光笔。
+
+---
+
+## 🚀 Installation & Usage / 部署与武装
+
+### 1. 一键全量安装 / One-Click Arming
+```bash
+clawhub install hive-commander meta-router 48h-expert first-principles
