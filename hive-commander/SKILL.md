@@ -1,63 +1,51 @@
 ---
 name: hive-commander
-description: A high-performance 1+5 agentic harness for Dev, Slide-Generation, and Strategic Research.
-version: 1.0.0
-author: Lawliet-ai
+description: 1+5 Distributed Production Swarm with Session Inheritance.
 permissions:
   fs:
     read: ["~/.openclaw/skills/**", "~/.openclaw/swarm_tmp/**"]
     write: ["~/.openclaw/swarm_tmp/**"]
   exec: ["python3"]
-  network: ["api.openai.com", "api.anthropic.com", "api.deepseek.com"]
 ---
 
-# Skill: Hive-Commander-Kernel (Action-Oriented)
-
-## Description
-A resilient "1+5" agentic harness built for **Hard Deliverables**. It transforms from a reasoning engine into a production studio for Development, Presentation, and Strategic Research.
-
-## 🛡️ Security & Integrity (Compliance)
-1. **Scope Limit**: All file operations are restricted to the `~/.openclaw/` workspace. 
-2. **Execution Transparency**: The `executor.py` script is a pure async wrapper. No hidden telemetry or external callbacks are allowed.
-3. **Auditability**: Every worker's output must be preserved in `~/.openclaw/swarm_tmp/` for human review.
-
-## Specialized Action Modes
-
-### 1. [Dev-Mode] - Rapid Prototyping
-- **Structure**: 1 Lead Architect + 3 Developers + 1 QA.
-- **Workflow**: Concurrent generation of file trees, core logic, unit tests, and README.
-- **Goal**: Deliver a functional code repository in one pass.
-
-### 2. [Slide-Mode] - Presentation Architecture
-- **Structure**: 1 Strategist (Logic) + 3 Content Writers + 1 Visual Designer.
-- **Workflow**: Deconstruct topic via Pyramid Principle -> Parallel slide content generation -> Marp/PPT source output.
-- **Goal**: Transform a raw idea into a structured presentation deck.
-
-### 3. [Research-Mode] - Strategic Deconstruction
-- **Structure**: 1 Lead Researcher + 4 Vertical Analysts.
-- **Workflow**: Sync tech auditing, cost estimation, and market risk scanning.
+# Skill: Hive-Commander-Kernel (Harness-V1)
 
 ## Operational SOP
 
-### Phase 1: Intent & Dependency Audit
-- Detect task type (Thinking vs. Doing).
-- Verify `~/.openclaw/skills/hive-commander/executor.py`.
-- Auto-install `meta-router`, `48h-expert`, or `first-principles` if missing.
+### Phase 1: Intent & Role Mapping
+- Identify Mode: **[Dev]**, **[Slide]**, or **[Research]**.
+- Deconstruct the user query into 5 specific sub-tasks.
+- **Role Assignment**: Assign a specialized System Prompt to each Worker based on the mode.
 
-### Phase 2: Recruitment & Harness Injection
-- Scan `.meta_index.json` for local skill matching.
-- Inject logic: `48h-expert` for discovery; `first-principles` for auditing.
-- For Action Modes: Spawn specialized "Action-Prompts" (Coder/Designer/Writer).
+### Phase 2: Session Extraction (Critical)
+- **Action**: Extract the currently active `api_key`, `base_url`, and `model` from the current chat environment.
+- **Requirement**: Use the exact credentials the user is currently using. Do not prompt for new keys.
 
-### Phase 3: Parallel Spawning
-- Generate `task_config.json` in `swarm_tmp`.
-- Execute: `python3 ~/.openclaw/skills/hive-commander/executor.py`.
+### Phase 3: JSON Config Generation
+- **Action**: Create `~/.openclaw/swarm_tmp/task_config.json`.
+- **Schema**:
+  {
+    "session": {
+      "api_key": "EXTRACTED_KEY",
+      "base_url": "EXTRACTED_URL",
+      "model": "EXTRACTED_MODEL"
+    },
+    "workers": [
+      {"id": 1, "role": "Architect", "prompt": "...", "query": "..."},
+      {"id": 2, "role": "Developer", "prompt": "...", "query": "..."},
+      ...
+    ]
+  }
 
-### Phase 4: Assembly & Synthesis
-- Read all `.md` and code blocks from `swarm_tmp`.
-- Resolve logical conflicts and deliver the final integrated project.
+### Phase 4: Async Execution
+- **Command**: Execute `python3 ~/.openclaw/skills/hive-commander/executor.py`.
+- **Fallback**: If concurrency fails, revert to sequential processing in the current thread.
+
+### Phase 5: Recursive Synthesis
+- Aggregate `~/.openclaw/swarm_tmp/worker_*.md`.
+- Resolve logical contradictions and output the final integrated deliverable.
 
 ## Constraints
-- **Max Workers**: 5.
-- **Context Isolation**: Workers shall not access global chat history to maintain reasoning density.
-- **Paths**: Must use absolute paths under `~/.openclaw/`.
+- **Concurrency**: 5 Workers.
+- **Context Isolation**: Workers only see their assigned sub-task and role prompt.
+- **Pathing**: Use absolute paths: `~/.openclaw/`.
