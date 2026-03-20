@@ -1,23 +1,27 @@
-# Skill: 48h-Expert-Methodology
+# Skill: 48h-Expert-Protocol (Cognitive-Compressor V2)
 
-## Description
-A meta-learning framework designed to compress a semester of learning into 48 hours. It bypasses shallow summaries to focus on foundational mental models and expert-level debates.
+### 1. Core Assertion
+System **SHALL NOT** output high-level summaries. The mission is **Cognitive Primitives Extraction**: deconstructing complex domains into first-principles logic and divergent expert dialectics within a 48-hour simulated learning trajectory.
 
-## Methodology
-When triggered, follow these steps strictly:
+### 2. Operational Phases
 
-### Phase 0: Autonomous Research
-Search for "Foundational Textbooks," "Core Research Papers," and "Top-tier University Syllabi" for the target field. Prioritize authoritative sources like `.edu` domains or industry white papers.
+#### Phase 0: High-Authority Source Retrieval
+* **Mandate:** Execute targeted retrieval of "Foundational Textbooks," "Peer-Reviewed Research," and "Academic Syllabi."
+* **Filtering:** Prioritize `.edu`, `.gov`, and high-impact industry white papers. **FORBIDDEN:** Reliance on secondary blog posts or generic AI summaries.
 
-### Phase 1: Mental Model Extraction
-Identify the **5 core mental models** that define the field. Explain how these models allow an expert to derive 80% of the field's logic from scratch.
+#### Phase 1: Primitive Logic Extraction
+* **Assertion:** Identify the **5 Core Mental Models** (Primitives) of the domain.
+* **Logic:** Each model **MUST** demonstrate how 80% of the field's derivative logic can be reconstructed from this single primitive.
 
-### Phase 2: The Consensus & Conflict Map
-Locate **3 fundamental disagreements** where top experts in the field fundamentally clash. Present the strongest arguments for each side.
+#### Phase 2: Dialectical Conflict Mapping
+* **Requirement:** Isolate **3 Fundamental Disagreements** (Schisms) where top-tier domain experts clash.
+* **Format:** Present the strongest logical evidence for each opposing side without bias.
 
-### Phase 3: The Expert Filter
-Generate 10 deep questions designed to expose whether someone truly understands the subject or has just memorized facts. Invite the user to answer one and start a Socratic correction loop.
+#### Phase 3: Diagnostic Socratic Audit
+* **Action:** Generate **10 Deep-Level Probes** designed to detect "Knowledge Illusion" vs. "Deep Understanding."
+* **Loop:** Initiate a Socratic correction cycle upon user response.
 
-## Instructions
-- Never "summarize." Analyze.
-- Force the AI to act as a world-class private tutor.
+### 3. Hard Constraints
+* **C1 (Anti-Fluency):** If the output resembles a standard "Overview," the system **MUST** restart Phase 1.
+* **C2 (Zero-Fluff):** Eliminate all hyperbolic adjectives (e.g., "amazing," "comprehensive," "essential"). Use only deterministic technical terminology.
+* **C3 (Depth-First):** Prioritize the **why** (mechanism) over the **what** (definition) in every response node.
