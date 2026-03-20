@@ -1,23 +1,33 @@
-# Skill: First-Principles-Deconstructor
+# Skill: First-Principles-Audit (Truth-Filter V2.1)
 
-## Description
-Strips away marketing jargon and industry inertia to analyze products and technologies based on fundamental physics and logical atoms.
+### 1. Core Assertion
+System **SHALL** systematically strip all "Marketing Jargon" and "Industry Inertia." The mission is to isolate **Atomic Truths**—physical, logical, and economic constraints—to verify the fundamental viability of any subject.
 
-## Methodology
-When triggered, execute this rigorous audit:
+### 2. Operational Phases
 
-### Phase 0: Deep Deconstruction Search
-Search for the underlying physical laws, cost structures, and core algorithms of the target. Look for patents, technical white papers, and "bottleneck" constraints.
+#### Phase 0: Technical Ground-Truth Retrieval
+* **Mandate:** Locate patents, technical white papers, cost-structure breakdowns, and raw physical constants.
+* **Filtering:** Explicitly ignore PR announcements, celebrity endorsements, and "Industry Standard" claims.
 
-### Phase 1: Atomic Fact Identification
-List the **3-5 inescapable physical/logical constraints** (e.g., bandwidth limits, marginal cost, energy density). Distinguish between "immutable constants" and "marketing fluff."
+#### Phase 1: Inescapable Constraint Mapping
+* **Assertion:** Identify **3-5 Atomic Constraints** (e.g., Energy Density, Marginal Cost, Bandwidth Limits, Entropy).
+* **Classification:** Categorize every feature as either an "Immutable Constant" or "Marketing Fluff."
 
-### Phase 2: Architectural Comparison
-When comparing, do not compare "feature lists." Compare the **efficiency of implementation logic**. Ask: "If we rebuilt this from scratch today, what is the most efficient path?"
+#### Phase 2: Efficiency-Logic Comparison
+* **Action:** Perform a "From-Scratch" reconstruction.
+* **Logic:** Do not compare feature lists. Compare the **Efficiency of Implementation Logic**. 
+* **Metric:** If a solution deviates from the most efficient physical path, it **MUST** be flagged as a logical anomaly.
 
-### Phase 3: Truth Reconstruction
-Provide a "verdict-style" conclusion based on first principles. Point out where the current solution violates efficiency or common sense.
+#### Phase 3: Logical Anomaly Detection (The Verdict)
+* **Action:** Generate a "Hard-Audit Verdict."
+* **Detection:** Explicitly point out where the current solution violates physics, economics, or basic common sense.
 
-## Instructions
-- Maintain extreme skepticism toward "industry standards."
-- Prioritize raw technical data over PR announcements.
+#### Phase 4: Chaining & Cross-Verification (Critical)
+* **Action:** Consume data from `~/.openclaw/swarm_tmp/expert_output.json` if available.
+* **Serialization:** Map findings into the local `audit_schema.json`.
+* **Persistence:** Write the final report to `~/.openclaw/swarm_tmp/audit_report.json`.
+
+### 3. Hard Constraints
+* **C1 (Zero-Tolerance):** Use of marketing terms (e.g., "Revolutionary," "Leading-edge") **SHALL** trigger a mandatory rewrite.
+* **C2 (Evidence-First):** Every audit claim **MUST** be backed by a physical or logical constant.
+* **C3 (Structured Output):** No conversational filler. Output **MUST** be a valid JSON payload following the Phase 4 mandate.
