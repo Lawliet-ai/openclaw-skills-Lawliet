@@ -1,23 +1,32 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hive-Commander Configuration Schema",
   "type": "object",
   "properties": {
-    "tasks": {
+    "session": {
+      "type": "object",
+      "properties": {
+        "api_key": { "type": "string" },
+        "base_url": { "type": "string", "format": "uri" },
+        "model": { "type": "string" }
+      },
+      "required": ["api_key", "base_url", "model"]
+    },
+    "workers": {
       "type": "array",
+      "minItems": 5,
       "maxItems": 5,
       "items": {
         "type": "object",
         "properties": {
-          "name": { "type": "string" },
-          "system_prompt": { "type": "string" },
-          "user_query": { "type": "string" },
-          "api_key": { "type": "string" },
-          "base_url": { "type": "string" },
-          "model": { "type": "string" }
+          "id": { "type": "integer" },
+          "role": { "type": "string" },
+          "prompt": { "type": "string" },
+          "query": { "type": "string" }
         },
-        "required": ["name", "system_prompt", "user_query", "api_key", "base_url", "model"]
+        "required": ["id", "role", "prompt", "query"]
       }
     }
   },
-  "required": ["tasks"]
+  "required": ["session", "workers"]
 }
