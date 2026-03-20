@@ -8,44 +8,32 @@ permissions:
   exec: ["python3"]
 ---
 
-# Skill: Hive-Commander-Kernel (Harness-V1)
+# Skill: Hive-Commander-Kernel (Harness-V2)
 
-## Operational SOP
+## 1. Execution Pipeline
 
-### Phase 1: Intent & Role Mapping
-- Identify Mode: **[Dev]**, **[Slide]**, or **[Research]**.
-- Deconstruct the user query into 5 specific sub-tasks.
-- **Role Assignment**: Assign a specialized System Prompt to each Worker based on the mode.
+### Phase 1: Sub-task Matrix Generation
+Identify the operational mode and map user intent into a 5-node matrix. Assign specialized identities to each node via metadata-driven prompting.
 
-### Phase 2: Session Extraction (Critical)
-- **Action**: Extract the currently active `api_key`, `base_url`, and `model` from the current chat environment.
-- **Requirement**: Use the exact credentials the user is currently using. Do not prompt for new keys.
+### Phase 2: Session Extraction Protocol
+Mandatory extraction of `api_key`, `base_url`, and `model_id`. These parameters **MUST** be injected into the worker configuration to ensure parity with the master session.
 
-### Phase 3: JSON Config Generation
-- **Action**: Create `~/.openclaw/swarm_tmp/task_config.json`.
-- **Schema**:
-  {
-    "session": {
-      "api_key": "EXTRACTED_KEY",
-      "base_url": "EXTRACTED_URL",
-      "model": "EXTRACTED_MODEL"
-    },
-    "workers": [
-      {"id": 1, "role": "Architect", "prompt": "...", "query": "..."},
-      {"id": 2, "role": "Developer", "prompt": "...", "query": "..."},
-      ...
-    ]
-  }
+### Phase 3: Configuration Serialization
+Construct `~/.openclaw/swarm_tmp/task_config.json` adhering to the following Schema:
+{
+  "session": {"api_key": "str", "base_url": "str", "model": "str"},
+  "workers": [{"id": "int", "role": "str", "prompt": "str", "query": "str"}]
+}
 
-### Phase 4: Async Execution
-- **Command**: Execute `python3 ~/.openclaw/skills/hive-commander/executor.py`.
-- **Fallback**: If concurrency fails, revert to sequential processing in the current thread.
+### Phase 4: Hardware-Accelerated Dispatch
+Invoke `python3 ~/.openclaw/skills/hive-commander/executor.py` for parallel execution.
+* **Timeout Handling:** 120s per node.
+* **Failure Policy:** Revert to synchronous serial execution on error.
 
-### Phase 5: Recursive Synthesis
-- Aggregate `~/.openclaw/swarm_tmp/worker_*.md`.
-- Resolve logical contradictions and output the final integrated deliverable.
+### Phase 5: Synthesis & Conflict Audit
+Final aggregation of `worker_*.md` outputs. Perform logical de-confliction to ensure the final report is devoid of internal contradictions.
 
-## Constraints
-- **Concurrency**: 5 Workers.
-- **Context Isolation**: Workers only see their assigned sub-task and role prompt.
-- **Pathing**: Use absolute paths: `~/.openclaw/`.
+## 2. Hard Constraints
+* **Parallelism:** Fixed at 5 Workers.
+* **Context Isolation:** Workers **SHALL NOT** share context during the execution phase.
+* **Pathing:** Strictly enforced absolute paths within `~/.openclaw/`.
