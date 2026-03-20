@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "First-Principles-Audit-Schema",
+  "type": "object",
+  "properties": {
+    "audit_subject": { "type": "string" },
+    "atomic_constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "parameter": { "type": "string" },
+          "constant_value": { "type": "string" },
+          "status": { "type": "string", "enum": ["Immutable", "Fluff"] }
+        }
+      }
+    },
+    "logical_anomalies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "claim": { "type": "string" },
+          "violation_desc": { "type": "string" },
+          "severity": { "type": "string", "enum": ["Critical", "Warning", "Minor"] }
+        }
+      }
+    },
+    "efficiency_gap": {
+      "type": "string",
+      "description": "Gap between current implementation and the theoretical most efficient path."
+    },
+    "final_verdict": { "type": "string" }
+  },
+  "required": ["audit_subject", "atomic_constraints", "logical_anomalies", "final_verdict"]
+}
